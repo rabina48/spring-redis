@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/user?allowPublicKeyRetrieval=true&useSSL=false
+    username: rabina
+    password: Rabs123!@#
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    hibernate:
+       ddl-auto: update
+    properties:
+        hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  redis:
+    enabled: true
+    host: localhost
+    port: 6379
+
+
+  cache:
+    redis:
+      cache-null-values: true
+      use-key-prefix: true
+    type: redis
+
